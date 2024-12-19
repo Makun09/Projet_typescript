@@ -1,3 +1,5 @@
+lien du trello: https://trello.com/invite/b/6764052d8d47fd6e358cef45/ATTI397e4568dd335ce03fe12753f5956bd8A2243D27/projettypescript
+
 Projet Electif – Framework et TypeScript
 
 Ce document explique les étapes pour réaliser le projet de Single Page Application (SPA) basé sur la RealWorld API.
