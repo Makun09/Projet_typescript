@@ -1,45 +1,133 @@
-Étapes générales :
-Comprendre le projet :
+Projet Electif – Framework et TypeScript
 
-Vous allez développer une SPA (Single Page Application) qui interagit avec une API simulant un blog (RealWorld API). Les fonctionnalités incluent la gestion des utilisateurs, articles, commentaires, tags, et favoris.
-Se familiariser avec l'API :
+Ce document explique les étapes pour réaliser le projet de Single Page Application (SPA) basé sur la RealWorld API.
 
-Consultez la documentation de RealWorld API.
-Testez les points d'entrée de l'API via Postman ou un autre client REST.
-Planifier le travail :
+Présentation du projet
 
-Découpez les fonctionnalités principales :
+Le but est de créer une SPA intégrant une API simulant un blog (à travers la RealWorld API).
+Les principales fonctionnalités à implémenter incluent :
+
+Gestion des utilisateurs (inscription, connexion, profil).
+
+Gestion des articles (CRUD, filtres, favoris).
+
+Gestion des commentaires (ajout, lecture, suppression).
+
+Liste des tags.
+
+L’API est accessible ici : https://realword-api.nouwillcode.com/.
+Documentation : https://realworld-docs.netlify.app/introduction/.
+
+Fonctionnalités demandées
+
 Connexion utilisateur.
-Page "voir tous les articles".
-Page "voir un article".
-Ajout d'un article en favoris.
-Une fonctionnalité au choix (ex. : commentaires, filtres).
-Configurer votre environnement de développement :
 
-Installez Vue.js avec TypeScript.
-Configurez les outils nécessaires :
-Pinia pour le state management.
-Vue Router pour la gestion des routes.
-Axios pour les appels API.
-Implémenter les fonctionnalités :
+Page « Voir tous les articles ».
 
-Créez des composants Vue pour chaque fonctionnalité.
-Exploitez les cycles de vie des composants (e.g., mounted, updated).
-Gérez les états globaux avec Pinia pour partager les données entre les composants.
-Respecter les consignes techniques :
+Page « Voir un article ».
 
-Utilisez TypeScript partout.
-Implémentez une gestion claire des événements (via watch, ref, etc.).
-Respectez les bonnes pratiques de développement avec Vue.js.
-Soigner l’interface utilisateur :
+Ajout d’un article en favoris.
 
-Même si le style est libre, veillez à une bonne ergonomie pour une expérience utilisateur fluide.
-Barème et points clés :
-Respect du cahier de charges (4 points).
-Soutenance collective (4 points).
-Fonctionnalité au choix (2 points).
-Respect des consignes techniques (4 points).
-Conseils :
-Travaillez en équipe pour répartir les tâches.
-Testez chaque fonctionnalité au fur et à mesure.
-Préparez-vous pour la soutenance en documentant bien votre travail.
+Une fonctionnalité au choix :
+
+Gestion des commentaires.
+
+Filtres sur les articles.
+
+Ajout ou suppression en favoris.
+
+Technologies à utiliser
+
+TypeScript (obligatoire).
+
+Vue.js (framework principal).
+
+Pinia (state management).
+
+Vue Router (gestion des routes).
+
+Axios (requêtes HTTP).
+
+Consignes techniques
+
+Utiliser les concepts Vue.js tels que ref(), watch(), gestion des événements, cycles de vie des composants.
+
+Implémenter un style cohérent (libre mais noté).
+
+Etapes de réalisation
+
+1. Comprendre l’API
+
+Lire la documentation de l’API (lien).
+
+Tester les différents endpoints avec un outil comme Postman.
+
+2. Configurer l’environnement
+
+Créer un projet Vue.js avec TypeScript :
+
+npm init vue@latest
+
+Installer les dépendances :
+
+npm install pinia vue-router axios
+
+3. Planifier le travail
+
+Découper les fonctionnalités principales en composants Vue :
+
+Authentification : formulaire de connexion.
+
+Liste des articles : affichage des articles avec filtres.
+
+Détails d’un article : affichage d’un article et ses commentaires.
+
+Favoris : bouton pour ajouter/enlever un article des favoris.
+
+4. Implémenter les composants
+
+Créer des routes dans vue-router.
+
+Utiliser Pinia pour gérer les états globaux (ex. : utilisateur connecté, liste des articles).
+
+Faire les appels API avec Axios.
+
+5. Tester les fonctionnalités
+
+Vérifier chaque fonctionnalité : connexion, affichage des articles, ajout en favoris, etc.
+
+Tester les cas limites (ex. : erreurs d’API).
+
+6. Améliorer l’interface utilisateur
+
+Assurer une bonne expérience utilisateur avec un design ergonomique.
+
+Implémenter un style responsive.
+
+7. Soutenance
+
+Documenter le travail réalisé.
+
+Préparer une démonstration fonctionnelle.
+
+Barème d’évaluation
+
+Note collective
+
+Qualité de la soutenance : 4 points.
+
+Respect du cahier de charges : 4 points.
+
+Fonctionnalité au choix : 2 points.
+
+Respect des consignes techniques : 4 points.
+
+Note individuelle
+
+Implication dans le projet : 2 points.
+
+Tâche réalisée : 2 points.
+
+Participation à la soutenance : 2 points.
+
+Note : Si la note individuelle est inférieure à la moyenne, la note collective sera divisée par deux.
