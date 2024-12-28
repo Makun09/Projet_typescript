@@ -1,21 +1,22 @@
 import { defineStore } from 'pinia';
+import axios from 'axios';
 
 export const useUserStore = defineStore('user', {
   state: () => ({
-    user: null as null | {
-      email: string;
-      token: string;
-      username: string;
-      bio: string | null;
-      image: string | null;
-    },
+    token: '',
+    user: null as any | null, // Informations utilisateur
   }),
   actions: {
-    login(userData: { email: string; token: string; username: string; bio: string; image: string }) {
+    setUser(userData: any) {
       this.user = userData;
+      this.token = userData.token;
+      localStorage.setItem('userToken', userData.token); // Persister le token
     },
     logout() {
       this.user = null;
+      this.token = '';
+      localStorage.removeItem('userToken');
     },
   },
 });
+

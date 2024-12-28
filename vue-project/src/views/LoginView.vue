@@ -10,6 +10,7 @@ import { defineComponent } from 'vue';
 import LoginForm from '../components/LoginForm.vue';
 import { useRouter } from 'vue-router';
 import { useUserStore } from '../stores/user'; // Store Pinia
+import axios from 'axios'; // Import Axios
 
 export default defineComponent({
   name: 'LoginView',
@@ -22,22 +23,17 @@ export default defineComponent({
       console.log('Tentative de connexion avec :', credentials);
 
       try {
-        // Appel API RealWorld pour la connexion
-        const response = await fetch('https://api.realworld.io/api/users/login', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ user: credentials }), // Adapter au format RealWorld
+        // Appel API RealWorld pour la connexion avec Axios
+        const response = await axios.post('https://cors-anywhere.herokuapp.com/https://api.realworld.io/api/users/login', {
+          user: credentials,
         });
 
-        if (!response.ok) {
-          throw new Error('Échec de la connexion');
-        }
 
-        const data = await response.json();
+        const data = response.data;
         console.log('Connexion réussie, données reçues :', data);
 
         // Enregistrer les informations utilisateur dans le store
-        userStore.login({
+        userStore.setUser({
           email: data.user.email,
           token: data.user.token,
           username: data.user.username,
@@ -47,7 +43,7 @@ export default defineComponent({
 
         // Redirection vers la page d'accueil ou une autre page
         router.push('/');
-      } catch (error) {
+      } catch (error: any) {
         console.error('Erreur lors de la connexion :', error);
         alert('Connexion échouée. Vérifiez vos informations.');
       }
