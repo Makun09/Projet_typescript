@@ -75,4 +75,14 @@ export default defineComponent({
 h1 {
   text-align: center;
 }
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Assure que le conteneur prend toute la largeur */
+  padding: 2rem;
+  background-color: #1a1a2e;
+}
 </style>

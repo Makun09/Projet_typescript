@@ -117,6 +117,10 @@
     padding: 2rem;
     border-radius: 10px;
     color: #e0e0e0;
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrer le contenu verticalement */
   }
   
   .edit-profile h1 {
@@ -177,4 +181,5 @@
     background-color: #8f5dc2;
   }
   </style>
+  
   

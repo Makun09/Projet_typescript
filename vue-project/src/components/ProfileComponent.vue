@@ -42,6 +42,10 @@ export default defineComponent({
   max-width: 600px;
   margin: 2rem auto;
   text-align: left;
+  height: 100vh; /* Prend toute la hauteur de l'écran */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre le contenu verticalement */
 }
 
 .profile-info {

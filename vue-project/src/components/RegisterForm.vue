@@ -47,9 +47,11 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100vh; /* Prendre toute la hauteur de l'écran */
   background-color: #1a1a2e; /* Noir légèrement violet */
   color: #e0e0e0; /* Texte gris clair */
+  padding: 0 1rem; /* Ajouter un peu de padding sur les côtés pour l'espace */
+  box-sizing: border-box; /* S'assurer que le padding ne dépasse pas la largeur */
 }
 
 /* Formulaire */
@@ -124,3 +126,4 @@ export default defineComponent({
   transform: translateY(0);
 }
 </style>
+

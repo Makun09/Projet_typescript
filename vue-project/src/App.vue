@@ -8,6 +8,7 @@
           <router-link to="/login" class="button">Connexion</router-link>
           <router-link to="/register" class="button">Inscription</router-link>
           <router-link to="/profile" class="button">Profil</router-link>
+          <router-link to="/article" class="button">Article</router-link>
 
         </div>
       </nav>
@@ -29,65 +30,66 @@ export default {
 
 <style scoped>
 /* Global container */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 #app {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Utiliser toute la hauteur de la fenêtre */
-  width: 100%; /* Utiliser toute la largeur de la fenêtre */
-  background-color: #1a1a2e; /* Fond noir légèrement violet */
-  color: #e0e0e0; /* Couleur du texte gris clair */
-  box-sizing: border-box;
-  margin: 0; /* Annuler les marges */
-  padding: 0; /* Annuler les padding */
+  min-height: 100vh;
+  width: 100%;
+  background-color: #1a1a1a;
+  color: #fff;
 }
 
-/* Header */
 header {
-  background-color: #0f0f1a; /* Gris très foncé */
-  color: #b88aff; /* Texte violet clair */
+  background-color: #1a1a2e;
   padding: 1rem;
-  text-align: center;
 }
 
-header nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+header h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.5rem;
 }
 
 .nav-links {
   display: flex;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
-.button {
-  color: #e0e0e0;
+.nav-links .button {
+  color: #fff;
   text-decoration: none;
-  border: 1px solid #b88aff;
   padding: 0.5rem 1rem;
+  border: 1px solid #fff;
   border-radius: 5px;
-  background-color: transparent;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.button:hover {
-  background-color: #b88aff;
-  color: #0f0f1a;
+.nav-links .button:hover {
+  background-color: #fff;
+  color: #282c34;
 }
 
-/* Main (Vue dynamique) */
 main {
-  flex: 1; /* Prend tout l'espace vertical restant entre le header et le footer */
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ajout pour s'assurer que le contenu prend toute la largeur */
   padding: 2rem;
-  text-align: center;
 }
 
-/* Footer */
 footer {
-  background-color: #0f0f1a;
-  color: #b88aff;
   text-align: center;
   padding: 1rem;
+  background-color: #1a1a2e;
+  color: #fff;
 }
 </style>
+

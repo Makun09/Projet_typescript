@@ -65,7 +65,16 @@ export default defineComponent({
 </script>
 
 <style scoped>
-h1 {
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
 }
 </style>
